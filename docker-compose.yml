@@ -1,0 +1,32 @@
+services:
+  app:
+    build: .
+    container_name: yoshwiki-app
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    volumes:
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
+      - ./images:/var/www/html/images
+    environment:
+      - MEDIAWIKI_DB_HOST=db
+      - MEDIAWIKI_DB_NAME=${DB_NAME}
+      - MEDIAWIKI_DB_USER=${DB_USER}
+      - MEDIAWIKI_DB_PASSWORD=${DB_PASSWORD}
+    depends_on:
+      - db
+
+  db:
+    image: mariadb:10.11
+    container_name: yoshwiki-db
+    restart: unless-stopped
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=${DB_NAME}
+      - MYSQL_USER=${DB_USER}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_ROOT_PASSWORD}
+
+volumes:
+  db_data:
