@@ -4,7 +4,7 @@
   "port": 8080,
   "type": "node",
 
-  "deploy_cmd": "docker compose pull && docker compose down && docker compose up -d",
+  "deploy_cmd": "docker compose build --pull && docker compose down && docker compose up -d",
   "up_cmd": "docker compose up -d",
   "backup_cmd": "docker exec yoshwiki-db mariadb-dump -u root -p${DB_ROOT_PASSWORD} wikidb --single-transaction | gzip > ~/backups/yoshwiki/yoshwiki.sql.gz"
 }
