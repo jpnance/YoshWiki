@@ -7,7 +7,7 @@ $wgSitename = "Yoshi's Island Speedrunning Wiki";
 $wgMetaNamespace = "Yoshi";
 
 $wgScriptPath = "";
-$wgServer = "https://yoshi.science";
+$wgServer = getenv('MEDIAWIKI_SERVER');
 
 $wgStylePath = "$wgScriptPath/skins";
 $wgLogo = "$wgScriptPath/images/rad_yoshi_logo.png";

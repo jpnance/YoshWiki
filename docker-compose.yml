@@ -9,6 +9,7 @@ services:
       - ./LocalSettings.php:/var/www/html/LocalSettings.php:ro
       - ./images:/var/www/html/images
     environment:
+      - MEDIAWIKI_SERVER=${MEDIAWIKI_SERVER}
       - MEDIAWIKI_DB_HOST=db
       - MEDIAWIKI_DB_NAME=${MEDIAWIKI_DB_NAME}
       - MEDIAWIKI_DB_USER=${MEDIAWIKI_DB_USER}
