@@ -1,7 +1,7 @@
 {
   "slug": "yoshwiki",
   "domain": "yoshi.science",
-  "port": 8080,
+  "port": 2887,
   "type": "node",
 
   "deploy_cmd": "docker compose build --pull && docker compose down && docker compose up -d",
