@@ -64,6 +64,7 @@ wfLoadExtension( 'WikiEditor' );
 wfLoadExtension( 'EmbedVideo' );
 
 # Permissions
+$wgGroupPermissions['*']['createaccount'] = false;
 $wgGroupPermissions['*']['edit'] = false;
 $wgGroupPermissions['*']['createpage'] = false;
 $wgGroupPermissions['user']['edit'] = false;
