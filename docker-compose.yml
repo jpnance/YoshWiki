@@ -10,6 +10,7 @@ services:
       - ./images:/var/www/html/images
       - ./mpm_prefork.conf:/etc/apache2/mods-available/mpm_prefork.conf
       - ./mpm_prefork.conf:/etc/apache2/mods-enabled/mpm_prefork.conf
+      - ./robots.txt:/var/www/html/robots.txt
     environment:
       - MEDIAWIKI_SERVER=${MEDIAWIKI_SERVER}
       - MEDIAWIKI_DB_HOST=db
