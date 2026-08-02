@@ -71,3 +71,8 @@ $wgGroupPermissions['user']['edit'] = false;
 $wgGroupPermissions['yosher']['edit'] = true;
 
 $wgShowExceptionDetails = true;
+
+$wgDisabledSpecialPages = [
+	'recentchanges',
+	'recentchangeslinked',
+];
