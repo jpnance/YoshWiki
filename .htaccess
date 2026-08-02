@@ -2,6 +2,6 @@
     RewriteEngine On
 
     # Block AI crawlers and aggressive bots by user agent
-    RewriteCond %{HTTP_USER_AGENT} (meta-externalagent|GPTBot|ChatGPT-User|Claude-Web|ClaudeBot|anthropic-ai|CCBot|Bytespider|PetalBot|Amazonbot|FacebookBot|facebookexternalhit|Applebot-Extended|Google-Extended|Omgilibot|Diffbot|DataForSeoBot|img2dataset|cohere-ai|PerplexityBot) [NC]
+    RewriteCond %{HTTP_USER_AGENT} (meta-externalagent|GPTBot|ChatGPT-User|Claude-Web|ClaudeBot|anthropic-ai|CCBot|Bytespider|PetalBot|Amazonbot|FacebookBot|facebookexternalhit|Applebot-Extended|Google-Extended|Omgilibot|Diffbot|DataForSeoBot|img2dataset|cohere-ai|PerplexityBot|MJ12bot|AhrefsBot|SemrushBot|DotBot|BLEXBot|YandexBot) [NC]
     RewriteRule .* - [F,L]
 </IfModule>

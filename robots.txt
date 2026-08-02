@@ -56,6 +56,24 @@ Disallow: /
 User-agent: img2dataset
 Disallow: /
 
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: YandexBot
+Disallow: /
+
 # All other bots - allow content but block expensive/useless endpoints
 User-agent: *
 Crawl-delay: 10
