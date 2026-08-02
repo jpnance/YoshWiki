@@ -14,6 +14,7 @@ services:
       - ./robots.txt:/var/www/html/robots.txt:ro
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini:ro
       - ./remoteip.conf:/etc/apache2/conf-enabled/remoteip.conf:ro
+      - ./apache-override.conf:/etc/apache2/conf-enabled/apache-override.conf:ro
     environment:
       - MEDIAWIKI_SERVER=${MEDIAWIKI_SERVER}
       - MEDIAWIKI_DB_HOST=db
